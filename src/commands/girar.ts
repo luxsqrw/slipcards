@@ -5,9 +5,9 @@ export default async (ctx: BotContext) => {
   if (await _brklyn.cache.get('is_drawing', ctx.from?.id.toString())) {
     const url = await _brklyn.cache.get('is_drawing', ctx.from?.id.toString())
     if (url.startsWith) {
-      return ctx.reply('🕹 Você já está rodando. Por favor, espere até que o giro atual termine.\n\nCaso a mensagem tenha sido deletada, use /cancelar para poder girar de novo.', {
+      return ctx.reply('🕹 Você já está rodando. Por favor, espere até que o spin atual termine.\n\nCaso a mensagem tenha sido deletada, use /cancelar para poder rodar de novo.', {
         reply_markup: {
-          inline_keyboard: [[{ text: '🔄 Ir à mensagem do giro', url: url }]]
+          inline_keyboard: [[{ text: '🔄 Ir à mensagem do spin', url: url }]]
         }
       })
     }
